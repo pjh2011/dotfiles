@@ -2,15 +2,14 @@ colo ron
 syntax on
 
 " Python settings
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-"    \ match BadWhitespace /\s\+$/
+" au BufNewFile,BufRead *.py # todo figure out why this isn't working
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
 
 set number " show line numbers
 set showcmd " show command in bottom bar
