@@ -1,22 +1,15 @@
 colo ron
 syntax on
 
-" Python settings
-" au BufNewFile,BufRead *.py # todo figure out why this isn't working
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set textwidth=79
-set expandtab
-set autoindent
-set fileformat=unix
-
 set number " show line numbers
 set showcmd " show command in bottom bar
 
+" TODO: figure out why this doesn't work
+"autocmd BufNewFile,BufRead * setlocal formatoptions-=r " don't auto create comments when pressing enter in insert mode
+
 set cursorline " highlight current line
 
-filetype indent on " load filetype-specific indent files
+filetype plugin indent on " filetype indentation and plugin files
 
 set wildmenu " visual autocomplete for command menu
 
@@ -24,11 +17,22 @@ set lazyredraw " redraw only when we need to
 
 set showmatch " highlight matching [{()}]
 
+let mapleader=","  " leader is comma
+
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
+
 nnoremap <leader><space> :nohlsearch<CR>
 
-let mapleader=","  " leader is comma
+" split below and right
+set splitbelow
+set splitright
+
+" split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " todo: fzf (better cntrl p)
 " todo: ag
@@ -46,6 +50,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -58,4 +66,7 @@ let g:lightline = {
       \ }
 
 " nerdtree settings
-map <C-o> :NERDTreeToggle<CR>
+nnoremap <C-o> :NERDTreeToggle<CR>
+
+" fzf settings
+nnoremap<C-p> :Files<CR>
