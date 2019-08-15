@@ -3,9 +3,6 @@ syntax on
 set number " show line numbers
 set showcmd " show command in bottom bar
 
-" TODO: figure out why this doesn't work
-"autocmd BufNewFile,BufRead * setlocal formatoptions-=r " don't auto create comments when pressing enter in insert mode
-
 set cursorline " highlight current line
 
 filetype plugin indent on " filetype indentation and plugin files
@@ -46,8 +43,6 @@ nnoremap <C-H> <C-W><C-H>
 " only need one esc press to exit visual mode
 set timeoutlen=1000 ttimeoutlen=0
 
-" todo: fzf (better cntrl p)
-" todo: ag
 " todo: multiple cursors
 " todo: tab completion
 " todo: vim slime?
@@ -87,5 +82,7 @@ nnoremap <C-o> :NERDTreeToggle<CR>
 nnoremap<C-p> :Files<CR>
 
 " gruvbox
-colorscheme gruvbox
 set bg=dark
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+"highlight Normal ctermbg=0 "to get true black background
