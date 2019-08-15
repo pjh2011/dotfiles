@@ -51,9 +51,8 @@ nnoremap <C-H> <C-W><C-H>
 " only need one esc press to exit visual mode
 set timeoutlen=1000 ttimeoutlen=0
 
-" todo: multiple cursors
 " todo: tab completion
-" todo: vim slime?
+" todo: vim slime
 
 " install vim-plug if not installed
 if empty(glob("~/.vim/autoload/plug.vim"))
@@ -67,7 +66,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
