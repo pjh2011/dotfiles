@@ -1,6 +1,6 @@
 syntax on
 
-set number " show line numbers
+set nu " show line numbers
 set showcmd " show command in bottom bar
 
 set cursorline " highlight current line
@@ -8,11 +8,8 @@ set cursorline " highlight current line
 filetype plugin indent on " filetype indentation and plugin files
 
 set wildmenu " visual autocomplete for command menu
-
 set lazyredraw " redraw only when we need to
-
 set showmatch " highlight matching [{()}]
-
 let mapleader=","  " leader is comma
 
 """ tab and shift tab remapping to work like normal text editor
@@ -25,10 +22,21 @@ nnoremap <S-Tab> <<
 " for insert mode
 inoremap <S-Tab> <C-d>
 
-set incsearch " search as characters are entered
-set hlsearch " highlight matches
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+" $/^ doesn't do anything
+nnoremap $ <nop>
+nnoremap ^ <nop>
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 
 nnoremap <leader><space> :nohlsearch<CR>
+
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
 
 " split below and right
 set splitbelow
