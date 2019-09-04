@@ -70,6 +70,7 @@ Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'morhetz/gruvbox'
+Plug 'terryma/vim-multiple-cursors'
 
 " Initialize plugin system
 call plug#end()
@@ -92,3 +93,10 @@ set bg=dark
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 "highlight Normal ctermbg=0 "to get true black background
+
+" vim-multiple-cursors
+" instructions:
+" highlight in visual mode. <cntrl+n> to select next, <cntrl+x> to skip the next
+" match. <cntrl+p> to remove current match and go back. <Alt+n> to select all
+" matches. <Esc> to go back to regular vim.
+" once seleced: <c> to change text. <I> insert at beginning. <A> append to end
