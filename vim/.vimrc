@@ -88,7 +88,7 @@ nnoremap <C-o> :NERDTreeToggle<CR>
 " fzf settings
 nnoremap<C-p> :Files<CR>
 
-" gruvbox
+" gruvbox colorscheme
 set bg=dark
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
