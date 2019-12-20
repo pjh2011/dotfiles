@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ~/.gitaliases
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # http://osxdaily.com/2013/02/05/improve-terminal-appearance-mac-os-x/
@@ -14,3 +12,5 @@ alias ls='ls -GFh'
 if [ -f ~/.git-completion.bash ]; then
         . ~/.git-completion.bash
 fi
+
+source ~/.gitaliases
