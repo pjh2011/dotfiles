@@ -9,8 +9,10 @@ alias gp="git push"
 alias gpo="git push origin"
 alias gf="git fetch"
 alias gst="git status"
+alias glo="git log"
 
 # autocomplete
 __git_complete g _git
 __git_complete gco _git_checkout
 __git_complete gp _git_push
+__git_complete gbr _git_branch
