@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.gitaliases
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # http://osxdaily.com/2013/02/05/improve-terminal-appearance-mac-os-x/

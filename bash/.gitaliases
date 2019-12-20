@@ -1,0 +1,16 @@
+alias g="git"
+alias gco="git checkout"
+alias gcom="git checkout master"
+alias gp="git push"
+alias grb="git rebase"
+alias gbr="git branch"
+alias gpl="git pull"
+alias gp="git push"
+alias gpo="git push origin"
+alias gf="git fetch"
+alias gst="git status"
+
+# autocomplete
+__git_complete g _git
+__git_complete gco _git_checkout
+__git_complete gp _git_push
