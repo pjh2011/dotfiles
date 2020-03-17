@@ -9,6 +9,8 @@ sql-lint() {
 }
 
 alias vli="vault login -method=okta username=peter.hughes@getcruise.com"
+alias dads="make bash project=dads"
+alias gtc="make bash project=ground_truth_coverage"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/peter.hughes/google-cloud-sdk/path.bash.inc' ]; then . '/Users/peter.hughes/google-cloud-sdk/path.bash.inc'; fi
