@@ -8,6 +8,7 @@ export CLICOLOR=1
 
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
+alias kill-docker='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 if [ -f ~/.git-completion.bash ]; then
         . ~/.git-completion.bash
