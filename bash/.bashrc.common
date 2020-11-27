@@ -17,3 +17,8 @@ fi
 git config --global alias.root 'rev-parse --show-toplevel'
 
 source ~/.gitaliases
+
+ssh-comma(){
+  ip=$1
+  ssh root@$ip -p 8022 -i ~/.ssh/id_rsa
+}
